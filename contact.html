@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Контакты</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900">
+  <style>
+    :root {
+      --bg-color: #141218;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      background-color: #212121;
+      font-family: 'Source Code Pro', sans-serif;
+      color: white;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background-color: #212121;
+      padding: 20px;
+      text-align: center;
+      width: 100%;
+    }
+
+    .nav-buttons {
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+      display: inline-block;
+      width: 170px;
+      height: 50px;
+      font-weight: bold;
+      font-size: 18px;
+      font-family: 'Source Code Pro', sans-serif;
+      background-color: #2d3436;
+      color: #ffffff;
+      text-align: center;
+      line-height: 50px;
+      margin: 0 10px;
+      position: relative;
+      cursor: pointer;
+      box-shadow: 5px 5px 0 0;
+      transition: 0.3s;
+      text-decoration: none;
+    }
+
+    .nav-link::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 170px;
+      height: 50px;
+      background: linear-gradient(to right, #ff7675, #e84393);
+      opacity: 0;
+      transition: 0.3s;
+      border-radius: 5px;
+    }
+
+    .nav-link:hover {
+      box-shadow: -5px -5px 0 0;
+      transform: scale(0.9);
+    }
+
+    .nav-link:hover::after {
+      opacity: 1;
+    }
+
+    section {
+      padding: 20px;
+      margin: 20px;
+      border-radius: 10px;
+      background-color: #333;
+      width: 90%;
+      max-width: 900px;
+    }
+
+    footer {
+      background-color: #212121;
+      text-align: center;
+      padding: 20px;
+      width: 100%;
+    }
+    footer img {
+      height: 50px;
+      margin-bottom: 10px;
+    }
+
+    .save-button {
+      font-size: 1.5rem;
+      border: 2px solid white;
+      border-radius: 100px;
+      width: 40px;
+      height: 40px;
+      padding: 5px;
+      margin-right: 10px;
+      transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+      color: white;
+      background-color: transparent;
+      cursor: pointer;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .save-button:hover {
+      width: 125px;
+      background-color: white;
+      box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
+      color: #91CCC2;
+      transition: 0.3s;
+    }
+
+    .save-button:active {
+      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+      transition: 0.05s;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Контакты</h1>
+  <div class="nav-buttons">
+    <a href="1.html" class="nav-link">Главная</a>
+    <a href="products.html" class="nav-link">Продукты</a>
+    <a href="reviews.html" class="nav-link">Отзывы</a>
+    <a href="support.html" class="nav-link">Тех. поддержка</a>
+  </div>
+</header>
+
+<section>
+  <h2>Связаться с нами</h2>
+
+  <div style="display: flex; align-items: center;">
+    <button class="save-button" onclick="copyToClipboard('info@5gtech.com')">E</button>
+    <p>Email: <a href="mailto:info@5gtech.com">info@5gtech.com</a></p>
+  </div>
+
+  <div style="display: flex; align-items: center;">
+    <button class="save-button" onclick="copyToClipboard('+1234567890')">N</button>
+    <p>Телефон: <a href="tel:+1234567890">+1 (234) 567-890</a></p>
+  </div>
+
+  <div style="display: flex; align-items: center;">
+    <button class="save-button" onclick="copyToClipboard('https://t.me/your_username')">Tg</button>
+    <p>Telegram: <a href="https://t.me/your_username">t.me/your_username</a></p>
+  </div>
+
+  <div style="display: flex; align-items: center;">
+    <button class="save-button" onclick="copyToClipboard('https://vk.com/your_username')">Vk</button>
+    <p>ВКонтакте: <a href="https://vk.com/your_username">vk.com/your_username</a></p>
+  </div>
+
+  <div style="display: flex; align-items: center;">
+    <button class="save-button" onclick="copyToClipboard('г. Москва, ул. Примерная, д. 1')">A</button>
+    <p>Юридический адрес: г. Москва, ул. Примерная, д. 1</p>
+  </div>
+</section>
+
+
+<script>
+  function copyToClipboard(contact) {
+    navigator.clipboard.writeText(contact).then(() => {
+      alert('Контакт ' + contact + ' скопирован в буфер обмена!');
+    }).catch(err => {
+      console.error('Ошибка копирования: ', err);
+    });
+  }
+</script>
+
+<footer>
+  <img src="logo_.png" alt="Логотип КлючКоннект">
+  <p>&copy; 2024 ООО "КлючКоннект". Все права защищены.</p>
+</footer>
+
+</body>
+</html>

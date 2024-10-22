@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #212121; /* Цвет фона сайта (темно-серый) */
+        margin: 0;
+        padding: 0;
+        color: white; /* Цвет текста */
+    }
+
+    header {
+        background: #212121;
+        color: white;
+        padding: 20px;
+        text-align: center;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    header h1 {
+        font-size: 36px;
+        margin: 0;
+        letter-spacing: 2px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .nav-link {
+        display: inline-block;
+        width: 170px;
+        height: 50px;
+        font-weight: bold;
+        font-size: 18px;
+        font-family: 'Montserrat', sans-serif;
+        background-color: #2d3436;
+        color: #ffffff;
+        text-align: center;
+        line-height: 50px;
+        margin: 0 10px;
+        position: relative;
+        cursor: pointer;
+        box-shadow: 5px 5px 0 0;
+        transition: 0.3s;
+        text-decoration: none;
+    }
+
+    .nav-link::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 170px;
+        height: 50px;
+        background: linear-gradient(to right, #ff7675, #e84393);
+        opacity: 0;
+        transition: 0.3s;
+        border-radius: 5px;
+    }
+
+    .nav-link:hover {
+        box-shadow: -5px -5px 0 0;
+        transform: scale(0.9);
+    }
+
+    .nav-link:hover::after {
+        opacity: 1;
+    }
+
+    section {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.2s ease;
+    }
+
+    section:hover {
+        transform: scale(1.02);
+    }
+
+    h2 {
+        font-size: 28px;
+        color: #00acc1;
+        margin-bottom: 20px;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ccc;
+    }
+
+    .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+
+    .card {
+        position: relative;
+        height: 400px;
+        width: 300px;
+        margin: 10px;
+        perspective: 1000px;
+        transition: transform 0.5s;
+        background-color: #2d3436;
+        border-radius: 10px;
+    }
+
+    .card:hover {
+        transform: scale(1.05);
+    }
+
+    .cover {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background-size: cover;
+        background-position: center;
+        border-radius: 10px;
+        transition: transform 0.5s;
+    }
+
+    /* Замените URL на свои изображения */
+    .item-a {
+        background-image: url('bluetooth.jpg');
+    }
+
+    .item-b {
+        background-image: url('gps gsm.jpg');
+    }
+
+    .item-c {
+        background-image: url('wi-fi.jpg');
+    }
+
+    .item-d {
+        background-image: url('5g.jpg');
+    }
+
+    .card-back {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        background: #212121;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+        opacity: 0;
+        transition: opacity 0.5s;
+    }
+
+    .card:hover .card-back {
+        opacity: 1;
+    }
+
+    .more-link {
+        color: white;
+        text-decoration: none;
+        padding: 10px 20px;
+        border: 1px solid white;
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .more-link:hover {
+        background-color: white;
+        color: #0b0f08;
+    }
+
+    footer {
+        background: #212121;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    footer img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    footer p {
+        margin: 0;
+        font-size: 14px;
+    }
+  </style>
+  <title>Продукты 5G</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<header>
+  <h1>Продукты 5G</h1>
+</header>
+
+<nav>
+  <a href="1.html" class="nav-link">Главная</a>
+  <a href="reviews.html" class="nav-link">Отзывы</a>
+  <a href="support.html" class="nav-link">Техподдержка</a>
+  <a href="contact.html" class="nav-link">Контакты</a>
+</nav>
+
+<section>
+  <h2>Наши продукты на базе технологий 5G</h2>
+  <div class="row">
+    <div class="card">
+      <div class="cover item-a"></div>
+      <div class="card-back">
+        <a href="1p.html" class="more-link">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover item-b"></div>
+      <div class="card-back">
+        <a href="2p.html" class="more-link">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover item-c"></div>
+      <div class="card-back">
+        <a href="3p.html" class="more-link">Подробнее</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="cover item-d"></div>
+      <div class="card-back">
+        <a href="4p.html" class="more-link">Подробнее</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <img src="logo_.png" alt="Логотип КлючКоннект">
+  <p>&copy; 2024 ООО "КлючКоннект". Все права защищены.</p>
+</footer>
+
+</body>
+</html>

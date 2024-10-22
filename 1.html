@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Технологии беспроводной связи - ООО "КлючКоннект"</title>
+
+    <style>
+        @font-face {
+            font-family: 'FuturaPT';
+            src: url('fonts/ofont.ru_FuturaPT.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        body {
+            font-family: 'FuturaPT', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #212121;
+            color: #e0e0e0;
+        }
+
+        header {
+            background: #212121;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        header img {
+            height: 80px;
+            margin-bottom: 10px; /* Добавлено для отступа между логотипом и заголовком */
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            letter-spacing: 2px;
+        }
+
+        nav {
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        nav img {
+            height: 50px;
+            vertical-align: middle;
+            margin-right: 20px;
+        }
+
+        .nav-link {
+            display: inline-block;
+            width: 170px;
+            height: 50px;
+            font-weight: bold;
+            font-size: 18px;
+            background-color: #2d3436;
+            color: #ffffff;
+            text-align: center;
+            line-height: 50px;
+            margin: 0 10px;
+            position: relative;
+            cursor: pointer;
+            box-shadow: 5px 5px 0 0;
+            transition: 0.3s;
+            text-decoration: none;
+        }
+
+        .nav-link::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 170px;
+            height: 50px;
+            background: linear-gradient(to right, #ff7675, #e84393);
+            opacity: 0;
+            transition: 0.3s;
+            border-radius: 5px;
+        }
+
+        .nav-link:hover {
+            box-shadow: -5px -5px 0 0;
+            transform: scale(0.9);
+        }
+
+        .nav-link:hover::after {
+            opacity: 1;
+        }
+
+        section {
+            padding: 40px;
+            background-color: #37474f;
+            margin: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            transition: transform 0.2s ease;
+        }
+
+        section:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            font-size: 28px;
+            color: #008080;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+        }
+
+        ul li {
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .employee-section {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .employee-card {
+            background-color: #455a64;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            margin: 20px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .employee-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .employee-photo {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            margin-bottom: 15px;
+            border: 3px solid #00acc1;
+        }
+
+        .employee-name {
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .employee-position {
+            font-size: 16px;
+            color: #b0bec5;
+        }
+
+        footer {
+            background: #212121;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        footer img {
+            height: 50px;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 14px;
+            color: white;
+        }
+
+        a, button {
+            transition: all 0.3s ease;
+            color: inherit;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <img src="logo_.png" alt="Логотип КлючКоннект">
+    <h1>ООО "КлючКоннект" - Лидер в сфере беспроводной связи</h1>
+</header>
+
+<nav>
+    <a href="#home" class="nav-link">Главная</a>
+    <a href="#about" class="nav-link">О компании</a>
+    <a href="#vision" class="nav-link">Видение</a>
+    <a href="#strategy" class="nav-link">Стратегия</a>
+    <a href="products.html" class="nav-link">Продукты</a>
+    <a href="reviews.html" class="nav-link">Отзывы</a>
+    <a href="support.html" class="nav-link">Тех. поддержка</a>
+    <a href="contact.html" class="nav-link">Контакты</a>
+    <a href="#employees" class="nav-link">Сотрудники</a>
+</nav>
+
+<section id="home">
+    <h2>Главная</h2>
+    <p>Добро пожаловать на сайт ООО "КлючКоннект" — лидера в разработке и производстве модулей связи для дронов и IoT-устройств. Мы стремимся предоставить высококачественные и инновационные решения, которые удовлетворяют потребности современного бизнеса.</p>
+</section>
+
+<section id="about">
+    <h2>О компании</h2>
+    <p>Наша миссия заключается в создании надежных и доступных модулей связи для дронов и IoT-устройств, которые помогают клиентам достигать своих целей и внедрять инновации в бизнес.</p>
+</section>
+
+<section id="vision">
+    <h2>Видение</h2>
+    <p>Мы видим себя лидером на российском рынке беспроводных технологий, который разрабатывает стандарты качества и способствует развитию новых технологий связи.</p>
+</section>
+
+<section id="strategy">
+    <h2>Стратегия</h2>
+    <ul>
+        <li>Инновации и качество продукции.</li>
+        <li>Анализ рыночных трендов и потребностей.</li>
+        <li>Партнерство с ключевыми игроками рынка.</li>
+        <li>Эффективная маркетинговая стратегия.</li>
+        <li>Формирование профессиональной команды.</li>
+    </ul>
+</section>
+
+<section id="employees">
+    <h2>Сотрудники</h2>
+    <div class="employee-section">
+        <div class="employee-card">
+            <img src="Олег.jfif" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Акишин Олег</div>
+            <div class="employee-position">Генеральный директор</div>
+        </div>
+        <div class="employee-card">
+            <img src="Дмитрий.jpg" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Кирилюк Дмитрий</div>
+            <div class="employee-position">Технический директор</div>
+        </div>
+        <div class="employee-card">
+            <img src="Соня.jfif" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Быкова Софья</div>
+            <div class="employee-position">Маркетолог</div>
+        </div>
+        <div class="employee-card">
+            <img src="Колян.jfif" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Высоканов Николай</div>
+            <div class="employee-position">Менеджер по продажам</div>
+        </div>
+        <div class="employee-card">
+            <img src="Никита.jpg" alt="Фото сотрудника" class="employee-photo">
+            <div class="employee-name">Мадгазин Никита</div>
+            <div class="employee-position">Менеджер по продажам</div>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <img src="logo_.png" alt="Логотип КлючКоннект">
+    <p>&copy; 2024 ООО "КлючКоннект". Все права защищены.</p>
+</footer>
+
+</body>
+</html>

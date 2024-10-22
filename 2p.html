@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Модем 5G</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <style>
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #212121;
+        color: white;
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        background: #1a1a1a;
+        padding: 20px;
+        text-align: center;
+        border-bottom: 3px solid #00acc1;
+    }
+
+    header h1 {
+        font-size: 36px;
+        margin: 0;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    nav {
+        padding: 15px;
+        text-align: center;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .link_wrapper {
+        position: relative;
+        display: inline-block;
+        margin: 15px;
+        text-align: center;
+    }
+
+    .back-button {
+        display: block;
+        width: 250px;
+        height: 50px;
+        line-height: 50px;
+        font-weight: bold;
+        text-decoration: none;
+        background: #333;
+        text-align: center;
+        color: #fff;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        border: 3px solid #333;
+        transition: all .35s;
+        border-radius: 25px;
+    }
+
+    .icon {
+        width: 50px;
+        height: 50px;
+        border: 3px solid transparent;
+        position: absolute;
+        transform: rotate(45deg);
+        right: -15px;
+        top: 50%;
+        transform: translateY(-50%) rotate(45deg);
+        z-index: -1;
+        transition: all .35s;
+    }
+
+    .icon svg {
+        width: 30px;
+        position: absolute;
+        top: calc(50% - 15px);
+        left: calc(50% - 15px);
+        transform: rotate(-45deg);
+        fill: #2ecc71;
+        transition: all .35s;
+    }
+
+    .back-button:hover {
+        width: 200px;
+        border: 3px solid #2ecc71;
+        background: transparent;
+        color: #2ecc71;
+    }
+
+    .back-button:hover + .icon {
+        border: 3px solid #2ecc71;
+        right: -25%;
+    }
+
+    section {
+        width: 90%;
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #333;
+        border-radius: 10px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    }
+
+    h2 {
+        font-size: 28px;
+        color: #00acc1;
+        margin-bottom: 10px;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+        position: relative;
+    }
+
+    h2::after {
+        content: '';
+        display: block;
+        width: 60px;
+        height: 4px;
+        background: #00acc1;
+        margin: 10px auto 0;
+        border-radius: 5px;
+    }
+
+    h3 {
+        font-size: 24px;
+        color: #00acc1;
+        margin: 15px 0;
+        font-family: 'Montserrat', sans-serif;
+        text-align: center;
+    }
+
+    p {
+        font-size: 18px;
+        line-height: 1.6;
+        color: #ccc;
+        margin-bottom: 15px;
+    }
+
+    ul {
+        list-style-type: disc;
+        padding-left: 20px;
+        color: #ccc;
+        margin: 10px 0;
+    }
+
+    footer {
+        background: #1a1a1a;
+        color: white;
+        text-align: center;
+        padding: 20px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        border-top: 3px solid #00acc1;
+    }
+
+    footer img {
+        height: 50px;
+        margin-bottom: 10px;
+    }
+
+    ul li {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeIn 0.5s forwards;
+    }
+
+    @keyframes fadeIn {
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Модем 5G</h1>
+</header>
+
+<nav>
+  <div class="link_wrapper">
+    <a href="javascript:history.back()" class="back-button">Назад</a>
+    <div class="icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+        <path d="M12 2L19 9L17.59 10.41L13 5.83V20H11V5.83L6.41 10.41L5 9L12 2Z"/>
+      </svg>
+    </div>
+  </div>
+</nav>
+
+<section>
+  <h2>Описание продукта</h2>
+  <p>
+    Модем 5G — компактное и удобное устройство для подключения к сети 5G. Идеально подходит для использования в любом месте благодаря простоте подключения и высокой скорости передачи данных.
+  </p>
+  <p><strong>Цена: 5,000₽</strong></p>
+</section>
+
+<section>
+  <h2>Системы умных домов</h2>
+  <p>
+    Системы умных домов представляют собой интегрированные решения, которые позволяют управлять различными аспектами вашего дома с помощью интернета и мобильных устройств. Использование технологии 5G значительно улучшает эффективность и надежность этих систем.
+  </p>
+  <p><strong>Преимущества систем умных домов с 5G:</strong></p>
+  <ul>
+    <li><strong>Высокая скорость передачи данных:</strong> Обеспечивает мгновенный доступ к устройствам и системам.</li>
+    <li><strong>Надежность соединения:</strong> Уменьшает задержки и обеспечивает бесперебойную работу умных устройств.</li>
+    <li><strong>Управление на расстоянии:</strong> Позволяет контролировать системы безопасности, освещения и климат-контроля из любого места.</li>
+    <li><strong>Интеграция с IoT:</strong> Легкая интеграция с устройствами Интернета вещей для более умного и автоматизированного дома.</li>
+  </ul>
+</section>
+
+<footer>
+  <img src="logo_.png" alt="Логотип КлючКоннект">
+  <p>&copy; 2024 ООО "КлючКоннект". Все права защищены.</p>
+</footer>
+
+</body>
+</html>
